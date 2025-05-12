@@ -60,6 +60,16 @@ public class RomanPrinterTest {
     
     );
 
+    private static final String[] D_Expected = String.join("\n",
+        " _______     ",
+        "|  ____  \\   ",
+        "|  |  |  |   ",
+        "|  |  |  |   ",
+        "|  |  |  |   ",
+        "|  |__|  |   ",
+        "|_______/    "
+    );
+
     // Tests para los números representativos
     @Test
     public void testPrint_One_ShouldReturnIAscii() {
@@ -150,23 +160,35 @@ public class RomanPrinterTest {
     @Test
     public void testPrint_FiftyFive_ShouldReturnLAscii() {
         String expected = L_Expected + V_Expected;
-        assertEquals(expected, RomanPrinter.print(50));
+        assertEquals(expected, RomanPrinter.print(55));
     }
     @Test
     public void testPrint_Ninety_ShouldReturnLAscii() {
         String expected = X_Expected + C_Expected;
-        assertEquals(expected, RomanPrinter.print(50));
+        assertEquals(expected, RomanPrinter.print(90));
     }
     @Test
     public void testPrint_NinetyNine_ShouldReturnLAscii() {
         String expected = I_Expected + C_Expected;
-        assertEquals(expected, RomanPrinter.print(50));
+        assertEquals(expected, RomanPrinter.print(100));
     }
     @Test
-    public void testPrint_OneHundred_ShouldReturnLAscii() {
-        String expected = C_Expected;
-        assertEquals(expected, RomanPrinter.print(50));
+    public void testPrint_TwoHundred_ShouldReturnLAscii() {
+        String expected = C_Expected + C_Expected;
+        assertEquals(expected, RomanPrinter.print(200));
     }
+    @Test
+    public void testPrint_FourHundred_ShouldReturnLAscii() {
+        String expected = C_Expected + D_Expected;
+        assertEquals(expected, RomanPrinter.print400));
+    }
+    
+    @Test
+    public void testPrint_FiveHundred_ShouldReturnLAscii() {
+        String expected = D_Expected;
+        assertEquals(expected, RomanPrinter.print(500));
+    }
+    
 
     // Casos inválidos
     @Test(expected = IllegalArgumentException.class)
