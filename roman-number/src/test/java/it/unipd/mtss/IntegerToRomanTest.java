@@ -83,7 +83,7 @@ public class IntegerToRomanTest {
         assertEquals("VI", result);
     }
     @Test
-    public void testConvert_Nine_ShouldReturnII() {
+    public void testConvert_Nine_ShouldReturnIX() {
         // Arrange
         int number = 9;
 
@@ -94,7 +94,7 @@ public class IntegerToRomanTest {
         assertEquals("IV", result);
     }
     @Test
-    public void testConvert_Ten_ShouldReturnII() {
+    public void testConvert_Ten_ShouldReturnX() {
         // Arrange
         int number = 10;
 
@@ -103,6 +103,18 @@ public class IntegerToRomanTest {
 
         // Assert
         assertEquals("X", result);
+    }
+
+    @Test
+    public void testConvert_Twenty_ShouldReturnXX() {
+        // Arrange
+        int number = 20;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("XX", result);
     }
 
 

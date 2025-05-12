@@ -11,13 +11,13 @@ public class IntegerToRoman {
     romanMap.put(4, "IV");
     romanMap.put(9, "IX");
     romanMap.put(10, "X");
+    romanMap.put(20, "XX");
   
-
 }
   public static String convert(int number){
 
-      if (number <= 0 || number > 10) {
-          throw new IllegalArgumentException("The number must be between 1 and 10");
+      if (number <= 0 || number > 20) {
+          throw new IllegalArgumentException("The number must be between 1 and 20");
       }
       int closest = romanMap.floorKey(number);
       if (number == closest) {
