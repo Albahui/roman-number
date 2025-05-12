@@ -1,0 +1,77 @@
+////////////////////////////////////////////////////////////////////
+// [Maria Fuensanta] [Trigueros Hernandez] [2133487]
+// [Alba Hui] [Larrosa Serrano] [2133266]
+////////////////////////////////////////////////////////////////////
+
+package it.unipd.mtss;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class IntegerToRomanTest {
+
+    // Test: Numero corretto    
+    @Test
+    public void testConvert_One_ShouldReturnI() {
+        // Arrange
+        int number = 1;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("I", result);
+    }
+
+    @Test
+    public void testConvert_Two_ShouldReturnII() {
+        // Arrange
+        int number = 2;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("II", result);
+    }
+
+    @Test
+    public void testConvert_Three_ShouldReturnIII() {
+        // Arrange
+        int number = 3;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("III", result);
+    }
+
+    // Test: Numero fuori 
+    @Test(expected = IllegalArgumentException.class)
+    public void testConvert_Zero_ShouldThrowException() {
+        // Arrange
+        int number = 0;
+
+        // Act & Assert
+        IntegerToRoman.convert(number);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConvert_Negative_ShouldThrowException() {
+        // Arrange
+        int number = -1;
+
+        // Act & Assert
+        IntegerToRoman.convert(number);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConvert_GreaterThanThree_ShouldThrowException() {
+        // Arrange
+        int number = 4;
+
+        // Act & Assert
+        IntegerToRoman.convert(number);
+    }
+}
