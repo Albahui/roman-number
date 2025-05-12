@@ -116,6 +116,50 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals("XX", result);
     }
+    @Test
+    public void testConvert_ThirtyTwo_ShouldReturnX() {
+        // Arrange
+        int number = 32;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("XXXII", result);
+    }
+    @Test
+    public void testConvert_Fhourty_ShouldReturnX() {
+        // Arrange
+        int number = 40;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("XL", result);
+    }
+    @Test
+    public void testConvert_FhourtyNine_ShouldReturnX() {
+        // Arrange
+        int number = 49;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("XLIX", result);
+    }
+    @Test
+    public void testConvert_FIFTY_ShouldReturnX() {
+        // Arrange
+        int number = 50;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("L", result);
+    }
 
 
 
@@ -141,7 +185,7 @@ public class IntegerToRomanTest {
     @Test(expected = IllegalArgumentException.class)
     public void testConvert_GreaterThanTen_ShouldThrowException() {
         // Arrange
-        int number = 11;
+        int number = 52;
 
         // Act & Assert
         IntegerToRoman.convert(number);

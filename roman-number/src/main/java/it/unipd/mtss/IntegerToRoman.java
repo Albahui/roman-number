@@ -12,12 +12,15 @@ public class IntegerToRoman {
     romanMap.put(9, "IX");
     romanMap.put(10, "X");
     romanMap.put(20, "XX");
+    romanMap.put(50, "L");
+    romanMap.put(40, "XL");
+  
   
 }
   public static String convert(int number){
 
-      if (number <= 0 || number > 20) {
-          throw new IllegalArgumentException("The number must be between 1 and 20");
+      if (number <= 0 || number > 50) {
+          throw new IllegalArgumentException("The number must be between 1 and 50");
       }
       int closest = romanMap.floorKey(number);
       if (number == closest) {
