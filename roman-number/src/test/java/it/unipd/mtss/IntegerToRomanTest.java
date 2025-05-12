@@ -91,7 +91,7 @@ public class IntegerToRomanTest {
         String result = IntegerToRoman.convert(number);
 
         // Assert
-        assertEquals("IV", result);
+        assertEquals("IX", result);
     }
     @Test
     public void testConvert_Ten_ShouldReturnX() {
@@ -117,7 +117,7 @@ public class IntegerToRomanTest {
         assertEquals("XX", result);
     }
     @Test
-    public void testConvert_ThirtyTwo_ShouldReturnX() {
+    public void testConvert_ThirtyTwo_ShouldReturnXII() {
         // Arrange
         int number = 32;
 
@@ -128,7 +128,7 @@ public class IntegerToRomanTest {
         assertEquals("XXXII", result);
     }
     @Test
-    public void testConvert_Fhourty_ShouldReturnX() {
+    public void testConvert_Fourty_ShouldReturnXL() {
         // Arrange
         int number = 40;
 
@@ -139,7 +139,7 @@ public class IntegerToRomanTest {
         assertEquals("XL", result);
     }
     @Test
-    public void testConvert_FhourtyNine_ShouldReturnX() {
+    public void testConvert_FourtyNine_ShouldReturnXLIX() {
         // Arrange
         int number = 49;
 
@@ -150,7 +150,7 @@ public class IntegerToRomanTest {
         assertEquals("XLIX", result);
     }
     @Test
-    public void testConvert_FIFTY_ShouldReturnX() {
+    public void testConvert_Fifty_ShouldReturnL() {
         // Arrange
         int number = 50;
 
@@ -160,8 +160,41 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals("L", result);
     }
+    @Test
+    public void testConvert_Sixty_ShouldReturnLX() {
+        // Arrange
+        int number = 60;
 
+        // Act
+        String result = IntegerToRoman.convert(number);
 
+        // Assert
+        assertEquals("LX", result);
+    }
+
+    @Test
+    public void testConvert_Ninety_ShouldReturnXC() {
+        // Arrange
+        int number = 90;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("XC", result);
+    }
+
+    @Test
+    public void testConvert_Hundred_ShouldReturnC() {
+        // Arrange
+        int number = 100;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("C", result);
+    }
 
     // Test: Numero fuori 
     @Test(expected = IllegalArgumentException.class)
