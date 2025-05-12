@@ -49,6 +49,16 @@ public class RomanPrinterTest {
         "|  |_____    ",
         "|________|   "
     );
+    private static final String[] C_Expected = String.join("\n",
+        "  ________   ",
+        " /  ______|  ",
+        "|  |         ",
+        "|  |         ",
+        "|  |         ",
+        "|  |______   ",
+        " \\________|  "
+    
+    );
 
     // Tests para los números representativos
     @Test
@@ -135,6 +145,26 @@ public class RomanPrinterTest {
     @Test
     public void testPrint_Fifty_ShouldReturnLAscii() {
         String expected = L_Expected;
+        assertEquals(expected, RomanPrinter.print(50));
+    }
+    @Test
+    public void testPrint_FiftyFive_ShouldReturnLAscii() {
+        String expected = L_Expected + V_Expected;
+        assertEquals(expected, RomanPrinter.print(50));
+    }
+    @Test
+    public void testPrint_Ninety_ShouldReturnLAscii() {
+        String expected = X_Expected + C_Expected;
+        assertEquals(expected, RomanPrinter.print(50));
+    }
+    @Test
+    public void testPrint_NinetyNine_ShouldReturnLAscii() {
+        String expected = I_Expected + C_Expected;
+        assertEquals(expected, RomanPrinter.print(50));
+    }
+    @Test
+    public void testPrint_OneHundred_ShouldReturnLAscii() {
+        String expected = C_Expected;
         assertEquals(expected, RomanPrinter.print(50));
     }
 
