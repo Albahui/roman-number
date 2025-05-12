@@ -195,6 +195,50 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals("C", result);
     }
+    @Test
+    public void testConvert_ThreeHundred_ShouldReturnXC() {
+        // Arrange
+        int number = 300;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("CCC", result);
+    }
+    @Test
+    public void testConvert_FourHundred_ShouldReturnXC() {
+        // Arrange
+        int number = 90;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("CD", result);
+    }
+    @Test
+    public void testConvert_FourHundredAndNinetyNine_ShouldReturnXC() {
+        // Arrange
+        int number = 499;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("XCIC", result);
+    }
+    @Test
+    public void testConvert_FiveHundred_ShouldReturnXC() {
+        // Arrange
+        int number = 90;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("D", result);
+    }
 
     // Test: Numero fuori 
     @Test(expected = IllegalArgumentException.class)
@@ -218,7 +262,7 @@ public class IntegerToRomanTest {
     @Test(expected = IllegalArgumentException.class)
     public void testConvert_GreaterThanTen_ShouldThrowException() {
         // Arrange
-        int number = 52;
+        int number = 502;
 
         // Act & Assert
         IntegerToRoman.convert(number);

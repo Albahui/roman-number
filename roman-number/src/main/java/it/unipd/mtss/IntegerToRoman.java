@@ -17,13 +17,16 @@ public class IntegerToRoman {
     romanMap.put(60, "LX");
     romanMap.put(90, "XC");
     romanMap.put(100, "C");
+    romanMap.put(400, "CD");
+    romanMap.put(500, "D");
+
   
   
 }
   public static String convert(int number){
 
-      if (number <= 0 || number > 100) {
-          throw new IllegalArgumentException("The number must be between 1 and 100");
+      if (number <= 0 || number > 500) {
+          throw new IllegalArgumentException("The number must be between 1 and 500");
       }
       int closest = romanMap.floorKey(number);
       if (number == closest) {
