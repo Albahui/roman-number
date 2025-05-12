@@ -13,8 +13,8 @@ public class IntegerToRoman {
 }
   public static String convert(int number){
 
-      if (number <= 0 || number > 3) {
-          throw new IllegalArgumentException("The number must be between 1 and 3");
+      if (number <= 0 || number > 6) {
+          throw new IllegalArgumentException("The number must be between 1 and 6");
       }
       int closest = romanMap.floorKey(number);
       if (number == closest) {
