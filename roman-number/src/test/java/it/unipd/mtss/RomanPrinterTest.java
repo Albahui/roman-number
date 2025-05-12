@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 
 public class RomanPrinterTest {
 
+    // ASCII Art para números clave
     private static final String I_Expected = String.join("\n",
         "    _____    ",
         "   |_   _|   ",
@@ -19,40 +20,6 @@ public class RomanPrinterTest {
         "   |_____|   "
     );
 
-   
-    private static final String II_Expected = String.join("\n",
-        "    _____        _____    ",
-        "   |_   _|      |_   _|   ",
-        "     | |          | |     ",
-        "     | |          | |     ",
-        "     | |          | |     ",
-        "    _| |_        _| |_    ",
-        "   |_____|      |_____|   "
-    );
-
-
-    private static final String III_Expected = String.join("\n", 
-        "    _____        _____        _____    ",
-        "   |_   _|      |_   _|      |_   _|   ",
-        "     | |          | |          | |     ",
-        "     | |          | |          | |     ",
-        "     | |          | |          | |     ",
-        "    _| |_        _| |_        _| |_    ",
-        "   |_____|      |_____|      |_____|   "
-    );
-
-  
-    private static final String IV_Expected = String.join("\n",
-        "    _____       __       __ ",
-        "   |_   _|      \\ \\     / / ",
-        "     | |         \\ \\   / /  ",
-        "     | |          \\ \\ / /   ",
-        "     | |           \\ V /    ",
-        "    _| |_           \\  /    ",
-        "   |_____|           \\/     "
-    );
-
-  
     private static final String V_Expected = String.join("\n",
         " __       __ ",
         " \\ \\     / / ",
@@ -63,28 +30,7 @@ public class RomanPrinterTest {
         "      \\/     "
     );
 
-  
-    private static final String VI_Expected = String.join("\n",
-        " __       __     _____    ",
-        " \\ \\     / /   |_   _|   ",
-        "  \\ \\   / /      | |     ",
-        "   \\ \\ / /       | |     ",
-        "    \\ V /        | |     ",
-        "     \\  /       _| |_    ",
-        "      \\/       |_____|   "
-    );
-
-    private static final String[] IX_Expected = String.join("\n",
-        " ____     __ __    __    ",
-        " |_   _|   \\ \\  / /    ",
-        "   | |      \\ \\/ /     ",
-        "   | |       \\  /      ",
-        "   | |        /  \\      ",
-        "  _| |_     / /\\ \\     ",
-        "  |____|   /_/  \\_\\    "
-    );
-    
-    private static final String[] X_Expected = String.join("\n",
+    private static final String X_Expected = String.join("\n",
         " __    __    ",
         " \\ \\  / /    ",
         "  \\ \\/ /     ",
@@ -94,108 +40,89 @@ public class RomanPrinterTest {
         " /_/  \\_\\    "
     );
 
+    // Tests para los números representativos
     @Test
     public void testPrint_One_ShouldReturnIAscii() {
-        // Arrange
-        int number = 1;
-
-        // Act
-        String result = RomanPrinter.print(number);
-
-        // Assert
-        assertEquals(I_Expected, result);
-    }
-
-    @Test
-    public void testPrint_Two_ShouldReturnIIAscii() {
-        // Arrange
-        int number = 2;
-
-        // Act
-        String result = RomanPrinter.print(number);
-
-        // Assert
-        assertEquals(II_Expected, result);
+        assertEquals(I_Expected, RomanPrinter.print(1));
     }
 
     @Test
     public void testPrint_Three_ShouldReturnIIIAscii() {
-        // Arrange
-        int number = 3;
-
-        // Act
-        String result = RomanPrinter.print(number);
-
-        // Assert
-        assertEquals(III_Expected, result);
+        String expected = I_Expected + I_Expected + I_Expected;
+        assertEquals(expected, RomanPrinter.print(3));
     }
 
     @Test
     public void testPrint_Four_ShouldReturnIVAscii() {
-        // Arrange
-        int number = 4;
-
-        // Act
-        String result = RomanPrinter.print(number);
-
-        // Assert
-        assertEquals(IV_Expected, result);
+        String expected = I_Expected + V_Expected;
+        assertEquals(expected, RomanPrinter.print(4));
     }
 
     @Test
     public void testPrint_Five_ShouldReturnVAscii() {
-        // Arrange
-        int number = 5;
-
-        // Act
-        String result = RomanPrinter.print(number);
-
-        // Assert
-        assertEquals(V_Expected, result);
+        assertEquals(V_Expected, RomanPrinter.print(5));
     }
 
     @Test
     public void testPrint_Six_ShouldReturnVIAscii() {
-        // Arrange
-        int number = 6;
-
-        // Act
-        String result = RomanPrinter.print(number);
-
-        // Assert
-        assertEquals(VI_Expected, result);
+        String expected = V_Expected + I_Expected;
+        assertEquals(expected, RomanPrinter.print(6));
     }
 
     @Test
-    public void testPrint_Six_ShouldReturnVIAscii() {
-        // Arrange
-        int number = 9;
-
-        // Act
-        String result = RomanPrinter.print(number);
-
-        // Assert
-        assertEquals(IX_Expected, result);
+    public void testPrint_Nine_ShouldReturnIXAscii() {
+        String expected = I_Expected + X_Expected;
+        assertEquals(expected, RomanPrinter.print(9));
     }
 
     @Test
-    public void testPrint_Six_ShouldReturnVIAscii() {
-        // Arrange
-        int number = 10;
+    public void testPrint_Ten_ShouldReturnXAscii() {
+        assertEquals(X_Expected, RomanPrinter.print(10));
+    }
 
-        // Act
-        String result = RomanPrinter.print(number);
+    @Test
+    public void testPrint_Fourteen_ShouldReturnXIVAscii() {
+        String expected = X_Expected + I_Expected + V_Expected;
+        assertEquals(expected, RomanPrinter.print(14));
+    }
 
-        // Assert
-        assertEquals(X_Expected, result);
+    @Test
+    public void testPrint_Fifteen_ShouldReturnXVAscii() {
+        String expected = X_Expected + V_Expected;
+        assertEquals(expected, RomanPrinter.print(15));
+    }
+
+    @Test
+    public void testPrint_Sixteen_ShouldReturnXVIAscii() {
+        String expected = X_Expected + V_Expected + I_Expected;
+        assertEquals(expected, RomanPrinter.print(16));
+    }
+
+    @Test
+    public void testPrint_Nineteen_ShouldReturnXIXAscii() {
+        String expected = X_Expected + I_Expected + X_Expected;
+        assertEquals(expected, RomanPrinter.print(19));
+    }
+
+    @Test
+    public void testPrint_Twenty_ShouldReturnXXAscii() {
+        String expected = X_Expected + X_Expected;
+        assertEquals(expected, RomanPrinter.print(20));
+    }
+
+    // Casos inválidos
+    @Test(expected = IllegalArgumentException.class)
+    public void testPrint_Zero_ShouldThrowException() {
+        RomanPrinter.print(0);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testPrint_InvalidNumber_ShouldThrowException() {
-        // Arrange
-        int number = 0;
+    public void testPrint_Negative_ShouldThrowException() {
+        RomanPrinter.print(-1);
+    }
 
-        // Act & Assert
-        RomanPrinter.print(number);
+    @Test(expected = IllegalArgumentException.class)
+    public void testPrint_AboveTwenty_ShouldThrowException() {
+        RomanPrinter.print(21);
     }
 }
