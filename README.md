@@ -6,12 +6,6 @@
 
 # Roman Number Converter
 
-![Build Status](https://github.com/Albahui/roman-number/actions/workflows/maven.yml/badge.svg)
-
-[![codecov](https://codecov.io/gh/Albahui/roman-number/branch/main/graph/badge.svg?token=d3980e8a-a237-4dca-b4ba-f6833fea1c20)](https://codecov.io/gh/Albahui/roman-number)
-
-
-
 ### Test primi 3
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
@@ -225,3 +219,10 @@
 [INFO] Finished at: 2025-05-12T17:50:22+02:00
 [INFO] ------------------------------------------------------------------------
 
+
+
+
+
+![Build Status](https://github.com/Albahui/roman-number/actions/workflows/maven.yml/badge.svg)
+
+[![codecov](https://codecov.io/gh/Albahui/roman-number/branch/main/graph/badge.svg?token=d3980e8a-a237-4dca-b4ba-f6833fea1c20)](https://codecov.io/gh/Albahui/roman-number)
