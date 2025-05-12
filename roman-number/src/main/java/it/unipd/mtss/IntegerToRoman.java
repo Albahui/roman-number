@@ -7,6 +7,10 @@ public class IntegerToRoman {
   static {
 
     romanMap.put(1, "I");
+    romanMap.put(5, "V");
+    romanMap.put(4, "IV");
+    romanMap.put(1, "I");
+
 }
   public static String convert(int number){
 
