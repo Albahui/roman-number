@@ -16,6 +16,16 @@ public class RomanPrinter {
         "   |_____|   "
     };
 
+    private static final String[] V_Rep = {
+        " __       __ ",
+        " \\ \\     / / ",
+        "  \\ \\   / /  ",
+        "   \\ \\ / /   ",
+        "    \\ V /    ",
+        "     \\  /    ",
+        "      \\/     "
+    };
+
     public static String print(int num) {
         return printAsciiArt(IntegerToRoman.convert(num));
     }
@@ -25,7 +35,7 @@ public class RomanPrinter {
             throw new IllegalArgumentException("The roman number could not be null or empty");
         }
 
-        if (!romanNumber.matches("[I]+")) {
+        if (!romanNumber.matches("[IVXLCDM]+")) {
             throw new IllegalArgumentException("The roman number has invalid characters");
         }
 
@@ -42,6 +52,9 @@ public class RomanPrinter {
                 case 'I':
                     rep = I_Rep;
                     break;
+                case 'V':
+                    rep = V_Rep;
+                    break;
                 default:
                     throw new IllegalArgumentException("Invalid character: " + romanChar);
             }
@@ -50,7 +63,7 @@ public class RomanPrinter {
                 result[j] += rep[j];
             }
         }
-
+        
         return String.join("\n", result);
     }
 }
