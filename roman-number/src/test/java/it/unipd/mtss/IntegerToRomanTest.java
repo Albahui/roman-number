@@ -47,6 +47,42 @@ public class IntegerToRomanTest {
         assertEquals("III", result);
     }
 
+    @Test
+    public void testConvert_Four_ShouldReturnIV() {
+        // Arrange
+        int number = 4;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("IV", result);
+    }
+
+    @Test
+    public void testConvert_Five_ShouldReturnV() {
+        // Arrange
+        int number = 5;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("V", result);
+    }
+
+     @Test
+    public void testConvert_Six_ShouldReturnVI() {
+        // Arrange
+        int number = 6;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("VI", result);
+    }
+
     // Test: Numero fuori 
     @Test(expected = IllegalArgumentException.class)
     public void testConvert_Zero_ShouldThrowException() {
