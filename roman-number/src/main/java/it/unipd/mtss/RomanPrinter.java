@@ -35,6 +35,16 @@ public class RomanPrinter {
         "  / /\\ \\     ",
         " /_/  \\_\\    "
     };
+     
+     private static final String[] L_Rep = {
+        " __          ",
+        "|  |         ",
+        "|  |         ",
+        "|  |         ",
+        "|  |         ",
+        "|  |_____    ",
+        "|________|   "
+    };
 
 
     public static String print(int num) {
@@ -66,6 +76,12 @@ public class RomanPrinter {
                 case 'V':
                     rep = V_Rep;
                     break;
+                case 'X':
+                    rep = X_Rep;
+                    break;
+                case 'L':
+                    rep = L_Rep;
+                    break; 
                 default:
                     throw new IllegalArgumentException("Invalid character: " + romanChar);
             }
