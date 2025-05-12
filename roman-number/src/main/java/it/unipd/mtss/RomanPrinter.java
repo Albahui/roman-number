@@ -26,6 +26,17 @@ public class RomanPrinter {
         "      \\/     "
     };
 
+     private static final String[] X_Rep = {
+        " __    __    ",
+        " \\ \\  / /    ",
+        "  \\ \\/ /     ",
+        "   \\  /      ",
+        "   /  \\      ",
+        "  / /\\ \\     ",
+        " /_/  \\_\\    "
+    };
+
+
     public static String print(int num) {
         return printAsciiArt(IntegerToRoman.convert(num));
     }
