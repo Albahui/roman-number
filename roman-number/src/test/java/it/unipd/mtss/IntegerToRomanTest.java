@@ -82,6 +82,30 @@ public class IntegerToRomanTest {
         // Assert
         assertEquals("VI", result);
     }
+    @Test
+    public void testConvert_Nine_ShouldReturnII() {
+        // Arrange
+        int number = 9;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("IV", result);
+    }
+    @Test
+    public void testConvert_Ten_ShouldReturnII() {
+        // Arrange
+        int number = 10;
+
+        // Act
+        String result = IntegerToRoman.convert(number);
+
+        // Assert
+        assertEquals("X", result);
+    }
+
+
 
     // Test: Numero fuori 
     @Test(expected = IllegalArgumentException.class)
@@ -103,9 +127,9 @@ public class IntegerToRomanTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testConvert_GreaterThanThree_ShouldThrowException() {
+    public void testConvert_GreaterThanTen_ShouldThrowException() {
         // Arrange
-        int number = 4;
+        int number = 11;
 
         // Act & Assert
         IntegerToRoman.convert(number);
