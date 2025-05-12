@@ -12,29 +12,29 @@
 
 
  ### Test Primi 3 numeri
+ ``text
+ -------------------------------------------------------
+ [INFO]  T E S T S
+ [INFO] -------------------------------------------------------
+ [INFO] Running it.unipd.mtss.AppTest
+ [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 s - in it.unipd.mtss.AppTest
+ [INFO] Running it.unipd.mtss.IntegerToRomanTest
+ [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.123 s - in it.unipd.mtss.IntegerToRomanTest
+ [INFO] Running it.unipd.mtss.RomanPrinterTest
+ [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in it.unipd.mtss.RomanPrinterTest
+ [INFO]
+ [INFO] Results:
+ [INFO]
+ [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+ [INFO]
+ [INFO]
+ [INFO] --- jacoco-maven-plugin:0.8.7:report (report) @ roman-number ---
+ [INFO] Loading execution data file /mnt/c/Users/Alba Hui/OneDrive/Escritorio/roman-number/roman-number/target/jacoco.exec
+ [INFO] Analyzed bundle 'roman-number' with 3 classes
+ [INFO] ------------------------------------------------------------------------
+ [INFO] BUILD SUCCESS
+ [INFO] ------------------------------------------------------------------------
+ [INFO] Total time:  5.101 s
+ [INFO] Finished at: 2025-05-12T16:39:30+02:00
+ [INFO] ------------------------------------------------------------------------
  ``
--------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running it.unipd.mtss.AppTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 s - in it.unipd.mtss.AppTest
-[INFO] Running it.unipd.mtss.IntegerToRomanTest
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.123 s - in it.unipd.mtss.IntegerToRomanTest
-[INFO] Running it.unipd.mtss.RomanPrinterTest
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in it.unipd.mtss.RomanPrinterTest
-[INFO]
-[INFO] Results:
-[INFO]
-[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
-[INFO]
-[INFO]
-[INFO] --- jacoco-maven-plugin:0.8.7:report (report) @ roman-number ---
-[INFO] Loading execution data file /mnt/c/Users/Alba Hui/OneDrive/Escritorio/roman-number/roman-number/target/jacoco.exec
-[INFO] Analyzed bundle 'roman-number' with 3 classes
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-``
-[INFO] Total time:  5.101 s
-[INFO] Finished at: 2025-05-12T16:39:30+02:00
-[INFO] ------------------------------------------------------------------------'''
