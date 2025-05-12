@@ -74,6 +74,26 @@ public class RomanPrinterTest {
         "      \\/       |_____|   "
     );
 
+    private static final String[] IX_Expected = String.join("\n",
+        " ____     __ __    __    ",
+        " |_   _|   \\ \\  / /    ",
+        "   | |      \\ \\/ /     ",
+        "   | |       \\  /      ",
+        "   | |        /  \\      ",
+        "  _| |_     / /\\ \\     ",
+        "  |____|   /_/  \\_\\    "
+    );
+    
+    private static final String[] X_Expected = String.join("\n",
+        " __    __    ",
+        " \\ \\  / /    ",
+        "  \\ \\/ /     ",
+        "   \\  /      ",
+        "   /  \\      ",
+        "  / /\\ \\     ",
+        " /_/  \\_\\    "
+    );
+
     @Test
     public void testPrint_One_ShouldReturnIAscii() {
         // Arrange
@@ -144,6 +164,30 @@ public class RomanPrinterTest {
 
         // Assert
         assertEquals(VI_Expected, result);
+    }
+
+    @Test
+    public void testPrint_Six_ShouldReturnVIAscii() {
+        // Arrange
+        int number = 9;
+
+        // Act
+        String result = RomanPrinter.print(number);
+
+        // Assert
+        assertEquals(IX_Expected, result);
+    }
+
+    @Test
+    public void testPrint_Six_ShouldReturnVIAscii() {
+        // Arrange
+        int number = 10;
+
+        // Act
+        String result = RomanPrinter.print(number);
+
+        // Assert
+        assertEquals(X_Expected, result);
     }
 
     @Test(expected = IllegalArgumentException.class)
