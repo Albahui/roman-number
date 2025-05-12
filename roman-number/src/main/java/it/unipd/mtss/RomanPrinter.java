@@ -65,6 +65,16 @@ public class RomanPrinter {
         "|_______/    "
     };
 
+     private static final String[] M_Rep = {
+        " __    __    ",
+        "|  \\  /  |   ",
+        "|   \\/   |   ",
+        "| |\\  /| |   ",
+        "| | \\/ | |   ",
+        "| |    | |   ",
+        "|_|    |_|   "
+    };
+
 
     public static String print(int num) {
         return printAsciiArt(IntegerToRoman.convert(num));
@@ -105,7 +115,10 @@ public class RomanPrinter {
                     rep = C_Rep;
                     break;
                case 'D':
-                    rep = C_Rep;
+                    rep = D_Rep;
+                    break;
+               case 'M':
+                    rep = M_Rep;
                     break;
                 default:
                     throw new IllegalArgumentException("Invalid character: " + romanChar);

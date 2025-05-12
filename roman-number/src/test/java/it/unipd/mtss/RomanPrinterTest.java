@@ -70,6 +70,18 @@ public class RomanPrinterTest {
         "|_______/    "
     );
 
+    private static final String[] M_Expected = String.join("\n",
+        " __    __    ",
+        "|  \\  /  |   ",
+        "|   \\/   |   ",
+        "| |\\  /| |   ",
+        "| | \\/ | |   ",
+        "| |    | |   ",
+        "|_|    |_|   "
+    );
+
+    
+
     // Tests para los números representativos
     @Test
     public void testPrint_One_ShouldReturnIAscii() {
@@ -180,7 +192,7 @@ public class RomanPrinterTest {
     @Test
     public void testPrint_FourHundred_ShouldReturnLAscii() {
         String expected = C_Expected + D_Expected;
-        assertEquals(expected, RomanPrinter.print400));
+        assertEquals(expected, RomanPrinter.print(400));
     }
     
     @Test
@@ -188,6 +200,19 @@ public class RomanPrinterTest {
         String expected = D_Expected;
         assertEquals(expected, RomanPrinter.print(500));
     }
+
+    @Test
+    public void testPrint_NineHundred_ShouldReturnLAscii() {
+        String expected = C_Expected + M_Expected;
+        assertEquals(expected, RomanPrinter.print(900));
+    }
+
+    @Test
+    public void testPrint_Thpusand_ShouldReturnLAscii() {
+        String expected = M_Expected;
+        assertEquals(expected, RomanPrinter.print(1000));
+    }
+    
     
 
     // Casos inválidos
