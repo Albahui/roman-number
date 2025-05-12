@@ -5,39 +5,35 @@ import static org.junit.Assert.*;
 
 public class RomanPrinterTest {
 
-    
     private static final String I_Expected = String.join("\n",
         "    _____    ",
         "   |_   _|   ",
         "     | |     ",
         "     | |     ",
         "     | |     ",
-        "    | |    ",
-        "   |_|   "
+        "    _| |_    ",
+        "   |_____|   "
     );
 
-   
     private static final String II_Expected = String.join("\n",
         "    _____        _____    ",
         "   |_   _|      |_   _|   ",
-        "     | |           | |     ",
-        "     | |           | |     ",
-        "     | |           | |     ",
-        "    | |          | |    ",
-        "   |_|         |_|   "
+        "     | |          | |     ",
+        "     | |          | |     ",
+        "     | |          | |     ",
+        "    _| |_        _| |_    ",
+        "   |_____|      |_____|   "
     );
 
-  
-    private static final String III_Expected = String.join("\n",
+    private static final String III_Expected = String.join("\n", 
         "    _____        _____        _____    ",
         "   |_   _|      |_   _|      |_   _|   ",
-        "     | |           | |           | |     ",
-        "     | |           | |           | |     ",
-        "     | |           | |           | |     ",
-        "    | |          | |          | |    ",
-        "   |_|         |_|         |_|   "
+        "     | |          | |          | |     ",
+        "     | |          | |          | |     ",
+        "     | |          | |          | |     ",
+        "    _| |_        _| |_        _| |_    ",
+        "   |_____|      |_____|      |_____|   "
     );
-
 
     @Test
     public void testPrint_One_ShouldReturnIAscii() {
