@@ -55,6 +55,16 @@ public class RomanPrinter {
         " \\________|  "
     };
 
+     private static final String[] D_Rep = {
+        " _______     ",
+        "|  ____  \\   ",
+        "|  |  |  |   ",
+        "|  |  |  |   ",
+        "|  |  |  |   ",
+        "|  |__|  |   ",
+        "|_______/    "
+    };
+
 
     public static String print(int num) {
         return printAsciiArt(IntegerToRoman.convert(num));
@@ -92,6 +102,9 @@ public class RomanPrinter {
                     rep = L_Rep;
                     break; 
                 case 'C':
+                    rep = C_Rep;
+                    break;
+               case 'D':
                     rep = C_Rep;
                     break;
                 default:
