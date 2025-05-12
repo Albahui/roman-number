@@ -19,14 +19,16 @@ public class IntegerToRoman {
     romanMap.put(100, "C");
     romanMap.put(400, "CD");
     romanMap.put(500, "D");
+    romanMap.put(900, "CM");
+    romanMap.put(1000, "M");
 
   
   
 }
   public static String convert(int number){
 
-      if (number <= 0 || number > 500) {
-          throw new IllegalArgumentException("The number must be between 1 and 500");
+      if (number <= 0 || number > 1000) {
+          throw new IllegalArgumentException("The number must be between 1 and 11000");
       }
       int closest = romanMap.floorKey(number);
       if (number == closest) {
